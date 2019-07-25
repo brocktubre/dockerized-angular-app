@@ -2,17 +2,11 @@
   - hosts: local
     become: true
     tasks:
-      - name: Installing packages
-        apt:
-          name: 
-            - apache2
-          state: present
-      - name: Ensure apache starts
-        service: name=apache2 state=started enabled=yes
       - name: Install angular-cli
         npm: 
           name: "@angular/cli"
           global: yes
+          state: present
       - name: Remove node_modules
         file:
           name: /tmp/site/node_modules

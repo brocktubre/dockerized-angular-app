@@ -11,43 +11,47 @@
       <div class="row">
         <div class="header text-center">
           <div class="jumbotron">
-              <img class="ansible-logo" src="../assets/ansible_logo.png" alt="ansible logo"/>
+              <div class="row mx-auto d-block">
+                <img class="ansible-logo col-4" src="../assets/docker_logo.png" alt="docker logo"/>
+                <img class="ansible-logo col-4" src="../assets/angular_logo.png" alt="angular logo"/>
+                <img class="ansible-logo col-4" src="../assets/ansible_logo.png" alt="ansible logo"/>
+              </div>
               <h1 class="display-3">{{title}}</h1>
-              <p class="lead">Being able to configure and update your environments is an important part of DevOps. Doing these tasks quickly and easily is even more important. Ansible helps solve the problem of manually configuring servers one-by-one. Using Ansible as an automation tool System Administrators can update and configure servers from a single machine. This course is a way to learn how to setup Ansible and a sandbox environment to learn in. You’ll learn how to manage servers using Ansible playbooks, stand up a new environments, and monitor your cloud infrastructure.</p>
-              <p><a class="btn btn btn-success" href="https://github.com/ACloudGuru-Resources/Course_Introduction_to_Ansible" role="button">See source code <i class="fa fa-code"></i></a></p>
+              <p class="lead">This application is a simple example of how to use Docker + Angular + Ansible. This simple application uses Docker to containerize an Angular app and uses ANsible to load and configure the build/distribution of the Angular application.</p>
+              <p><a class="btn btn btn-success" href="https://github.com/brocktubre/dockerized-angular-app" role="button">See source code <i class="fa fa-code"></i></a></p>
             </div>
-            <img class="mx-auto d-block" style="max-width: 1000px; padding-top: 50px;"src="../assets/ansible-setup-diagram.png" alt="Ansible setup diagram">
+            <!-- <img class="mx-auto d-block" style="max-width: 1000px; padding-top: 50px;"src="../assets/middle_img.png" alt="Image"> -->
         </div>
       </div>
       <div class="row">
         <div class="col-6">
           <div class="row info-item">
-              <h3> 1. Course Introduction </h3>
-              <p> Discuss what Ansible is and some of its use cases. We will learn about why, when, and where it is used and similar tools used in the industry today.</p>
+              <h3> 1. Build Docker Image </h3>
+              <p> To build the Docker image use the following: docker build image -t ubuntu-angular</p>
           </div>
           <div class="row info-item">
-              <h3> 2. Setup Enviornment </h3>
-              <p> We will learn how to install Ansible and other tools get your system ready for hand on labs and experience you’ll use in this course. </p>
+              <h3> 2. Run the docker container </h3>
+              <p> Run the docker contianer: docker run ubuntu-angular </p>
           </div>
           <div class="row info-item">
-              <h3> 3. Tasks </h3>
-              <p> Learn about adhoc commands and how to use the Ansible command line tools. Gain experience with running our first Ansible commands. </p>
+              <h3> 3. Run app locally </h3>
+              <p> Run the angular app: ng serve </p>
           </div>
         </div>
         <div class="col-6">
             <div class="row info-item">
-                <h3> 4. Playbooks </h3>
-                <p> Hands on experience with writing and running playbooks to achieve deployment, automation and orchestration.</p>
+                <h3> 4. Build Docker Image </h3>
+                <p> To build the Docker image use the following: docker build image -t ubuntu-angular</p>
             </div>
             <div class="row info-item">
-                <h3> 5. Using Varibles </h3>
-                <p> Learn how to refactor playbooks by using variables and making our automation more modular. </p>
+                <h3> 5. Run the docker container </h3>
+                <p> Run the docker contianer: docker run ubuntu-angular </p>
             </div>
             <div class="row info-item">
-                <h3> 6. After Thoughts </h3>
-                <p> We will go over common issues, testing playbooks, the future of automation as code and cleaning up our environment.  </p>
+                <h3> 6. Run app locally </h3>
+                <p> Run the angular app: ng serve </p>
             </div>
-        </div>
+          </div>
       </div>
     <footer class="footer">
       <p>© Copyright {{date}}</p>
