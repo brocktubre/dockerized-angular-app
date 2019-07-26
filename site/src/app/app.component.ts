@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Docker + Angular + Ansible';
+  title = 'Kubernetes + Docker + Angular + Ansible';
   date = new Date().getFullYear();
 }
