@@ -2,6 +2,14 @@
   - hosts: local
     become: true
     tasks:
+      - name: Ensure nginx is installed
+        apt: 
+          name: nginx
+          state: present
+      - name: Starting nginx
+        service:
+          name: nginx
+          state: started
       - name: Install angular-cli
         npm: 
           name: "@angular/cli"
