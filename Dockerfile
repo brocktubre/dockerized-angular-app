@@ -1,6 +1,6 @@
 FROM ubuntu:14.04
 RUN apt-get update -y
-RUN apt-get install software-properties-common -y
+RUN apt-get install software-properties-common -y --fix-missing
 RUN apt-add-repository ppa:ansible/ansible
 RUN apt-get update -y
 RUN apt-get install ansible -y
@@ -21,6 +21,5 @@ WORKDIR /home/ansible
 RUN ansible-playbook /home/ansible/playbooks/setup-angular-app.yml
 
 EXPOSE 80
-CMD ["apache2ctl", "-D", "FOREGROUND"]
-# CMD ["service", "apache2", "restart"]
+# CMD ["apache2ctl", "-D", "FOREGROUND"]
 
