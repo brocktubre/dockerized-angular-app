@@ -3,7 +3,7 @@
 This application is a simple example of how to use Docker + Angular + Ansible. This simple application uses Docker to containerize an Angular app and uses Ansible to load and configure the build/distribution of the Angular application.
 
 1. Build Docker Image
-To build the Docker image use the following: `docker build image -t ubuntu-angular`
+To build the Docker image use the following: `docker image build -t ubuntu-angular .`
 
 2. Run the docker container
 Run the docker contianer: `docker run ubuntu-angular`
