@@ -16,10 +16,10 @@
           name: install
           path: /tmp/site
       - name: Build distribution
-        command: ng build --prod --aot
+        command: ng build --prod
         args:
           chdir: /tmp/site
-      - name: Copying site conents to /var/www/html
+      - name: Copying site contents to /var/www/html
         copy:
           src: /tmp/site/dist/site/
           dest: /var/www/html

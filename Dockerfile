@@ -21,5 +21,5 @@ WORKDIR /home/ansible
 RUN ansible-playbook /home/ansible/playbooks/setup-angular-app.yml
 
 EXPOSE 80
-# CMD ["apache2ctl", "-D", "FOREGROUND"]
+CMD ["apache2ctl", "-D", "FOREGROUND"]
 
