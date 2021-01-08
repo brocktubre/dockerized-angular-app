@@ -21,6 +21,8 @@ export class KinesisHelperComponent implements OnInit {
   public someErrorMessage: String
 
   public loadingSub;
+
+  public streamingData: String;
   
   constructor(private kinesisServiceHelper: KinesisHelperService) {
     this.isLoadingData = false;
@@ -44,8 +46,9 @@ export class KinesisHelperComponent implements OnInit {
 
     this.loadingSub = interval(1000).subscribe(x => {
         this.kinesisServiceHelper.streamData(region, secretAccessKey, accessKey, streamName)
-        .subscribe( sequenceNumber => {
+        .subscribe( payload => {
           this.isLoadingData = true;
+          this.streamingData = payload;
       }); 
     });
   }

@@ -15,7 +15,6 @@ export class KinesisHelperService {
 
   public streamData(region: string, secretAccessKey: string, accessKey: string, streamName: string ): Observable<String>{
     const sendResult = new Subject<String>();
-    console.log('Calling service to stream data.');
     AWS.config.update({region: region,
       accessKeyId: accessKey,
       secretAccessKey: secretAccessKey});
@@ -46,7 +45,7 @@ export class KinesisHelperService {
       if (err) {
         sendResult.error(err);
       }else {
-        sendResult.next(data.SequenceNumber);
+        sendResult.next(payload);
       }
     });
       return sendResult.asObservable(); 
