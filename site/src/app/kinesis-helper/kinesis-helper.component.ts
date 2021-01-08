@@ -46,14 +46,13 @@ export class KinesisHelperComponent implements OnInit {
         this.kinesisServiceHelper.streamData(region, secretAccessKey, accessKey, streamName)
         .subscribe( sequenceNumber => {
           this.isLoadingData = true;
-          console.log(sequenceNumber)
       }); 
     });
   }
 
   public stopStream() {
     this.loadingSub.unsubscribe();
-    this.isLoadingData = false
+    this.isLoadingData = false;
   }
 
 }
