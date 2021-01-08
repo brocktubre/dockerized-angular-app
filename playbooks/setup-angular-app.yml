@@ -26,8 +26,3 @@
           owner: root
           group: root
           mode: '0644'
-      - name: Restart apache service.
-        systemd:
-          name: apache2
-          daemon_reload: yes
-          state: restarted
